@@ -1,0 +1,27 @@
+:root {
+  /* COLORES */
+  --bg-main: #0b0b0b;
+  --bg-section: #111111;
+  --bg-card: #171717;
+  --accent: #dc3545;
+  --accent-alt: #f59e0b;
+  --text: #ffffff;
+  --muted: #d1d1d1;
+
+  /* HERO */
+  --hero-height: 100vh;
+  --hero-height-min: 550px;
+
+  /* ESPACIADO */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-mdf: 24px;
+
+  /* RADIOS */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+}

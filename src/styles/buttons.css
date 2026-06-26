@@ -1,0 +1,21 @@
+/* src/styles/buttons.css */
+.btn-danger {
+  background-color: var(--accent) !important;
+  border: none !important;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.btn-danger:hover {
+  background-color: #ff1744 !important;
+  transform: scale(1.04);
+}
+
+.btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+.btn-primary:hover {
+  background-color: #c0392b !important;
+  border-color: #c0392b !important;
+}

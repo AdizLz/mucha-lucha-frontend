@@ -1,0 +1,16 @@
+[
+  { "id": 1, "categoria": "eventos", "img": "https://xticket.mx/assets/uploads/lucha-libre-border-featured-20260520170405.png", "alt": "Evento de lucha libre" },
+  { "id": 2, "categoria": "eventos", "img": "https://luchacentral.com/wp-content/uploads/CS-057507_LVE_AAA_QUERATARO_1920x1080.jpg", "alt": "Evento AAA" },
+  { "id": 3, "categoria": "eventos", "img": "https://a.espncdn.com/photo/2022/0921/r1064919_1296x729_16-9.jpg", "alt": "Lucha libre" },
+  { "id": 4, "categoria": "mascaras", "img": "https://m.media-amazon.com/images/I/41pPa-4abYL._AC_SY1000_.jpg", "alt": "Máscara La Parka", "nombre": "La Parka" },
+  { "id": 5, "categoria": "mascaras", "img": "https://m.media-amazon.com/images/I/41wny6Jvu5L._AC_SY1000_DpWeblab_.jpg", "alt": "Máscara Rey Misterio", "nombre": "Rey Misterio" },
+  { "id": 6, "categoria": "mascaras", "img": "https://images-na.ssl-images-amazon.com/images/I/71hW5lh4amL._AC_UL600_SR600,600_.jpg", "alt": "Máscara Blue Demon", "nombre": "Blue Demon" },
+  { "id": 7, "categoria": "mascaras", "img": "https://m.media-amazon.com/images/I/51c6KX7B1uL._AC_SY1000_.jpg", "alt": "Máscara El Santo", "nombre": "El Santo" },
+  { "id": 8, "categoria": "mascaras", "img": "https://m.media-amazon.com/images/I/81wuwC0ebNL._AC_UY1000_.jpg", "alt": "Máscara El Místico", "nombre": "El Místico" },
+  { "id": 9, "categoria": "fans", "img": "https://img.chilango.com/2025/08/1023925_Vive-Latino-Mistico_web-1024x682.jpg", "alt": "Fans en evento" },
+  { "id": 10, "categoria": "fans", "img": "https://oem.com.mx/diariodequeretaro/img/23935427/1748964849/BASE_LANDSCAPE/1200/image.webp", "alt": "Afición lucha libre" },
+  { "id": 11, "categoria": "fans", "img": "https://blob.postadeportes.com/images/2025/05/03/arena-mexico-cmll-1bc15b85-focus-0-0-1200-600.webp", "alt": "Arena México" },
+  { "id": 12, "categoria": "leyendas", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbmGjLEtohxjPbLdjUmcdRuNVgcH9BdolRg&s", "alt": "Leyenda del ring" },
+  { "id": 13, "categoria": "leyendas", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDEyeENPgSEHMBRqRJ06Mwb5K_tZu-ufeg4g&s", "alt": "Leyenda del ring" },
+  { "id": 14, "categoria": "leyendas", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQsJ7LrNAQtL5aNgWTBTz2yvonO5KHJG7DA&s", "alt": "Leyenda del ring" }
+]

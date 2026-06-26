@@ -1,0 +1,112 @@
+.navbar {
+  background-color: black !important;
+  transition: all 0.4s ease-in-out;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.25);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MARCA */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none !important;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.brand-text {
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.text-accent-alt {
+  color: var(--accent-alt);
+}
+
+/* LINKS */
+.nav-link {
+  color: var(--text) !important;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  margin: 0 var(--space-sm);
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+.nav-link:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent);
+}
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* CARRITO */
+.carrito-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carrito-contador {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTÓN INICIAR SESIÓN */
+.iniciar-sesion-btn {
+  white-space: nowrap;
+}
+
+/* TOGGLER */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start !important;
+  }
+  .carrito-btn,
+  .iniciar-sesion-btn {
+    margin-top: var(--space-sm);
+  }
+}

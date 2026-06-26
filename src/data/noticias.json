@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "categoria": "Resultados",
+    "titulo": "Psycho Clown defiende el Campeonato Mundial en Triplemanía",
+    "texto": "El gladiador se impuso en una lucha de infarto ante miles de aficionados.",
+    "img": "https://cdn.milenio.com/uploads/media/2026/05/09/bts-lucha-libre-estadio-gnp.jpg",
+    "destacada": true,
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "categoria": "Noticias",
+    "titulo": "Místico regresa a la Arena México tras lesión",
+    "texto": "El carismático luchador anunció su regreso para el próximo viernes de manera espectacular.",
+    "img": "https://blob.postadeportes.com/images/2025/06/26/gqpomvdbiaedv8s-0f9f808e-focus-min0.19-0.68-498-423.webp",
+    "destacada": false,
+    "link": "https://superluchas.com/lucha-libre-aaa-23-de-mayo-2026/"
+  },
+  {
+    "id": 3,
+    "categoria": "Entrevistas",
+    "titulo": "Entrevista exclusiva: El futuro de la lucha libre independiente",
+    "texto": "Hablamos con las promesas emergentes que están revolucionando las arenas locales.",
+    "img": "https://yt3.googleusercontent.com/8dI4qmXKFoPA9MI8p9ss1xSdeLlBYXfAQeUu3wDIXyPmvXO3UEvaw8Fo3HADbaXZFEF5_k3kuw=s900-c-k-c0x00ffffff-no-rj",
+    "destacada": false,
+    "link": "https://superluchas.com/aew-double-or-nothing-2026/"
+  },
+  {
+    "id": 4,
+    "categoria": "Videos",
+    "titulo": "Top 10 momentos más épicos de la lucha libre mexicana",
+    "texto": "Revivimos las caídas de máscaras y cabelleras que marcaron la historia.",
+    "img": "https://st2.depositphotos.com/1579454/11358/i/450/depositphotos_113585834-stock-photo-top-10-ten-award-cup.jpg",
+    "destacada": false,
+    "link": "https://www.record.com.mx/tema/lucha-libre"
+  },
+  {
+    "id": 5,
+    "categoria": "Noticias",
+    "titulo": "¡Hay tiro! Duelo de apuestas confirmado",
+    "texto": "Se rompieron las máscaras, se dieron con las sillas de primera fila y ya firmaron los contratos.",
+    "img": "https://cdn.shopify.com/s/files/1/0268/6173/1921/files/Img_blog_horizontal_3236b5b9-ec9a-4281-afb6-70e9d763e0f9.jpg?v=1668388134",
+    "destacada": false,
+    "link": "https://superluchas.com/lucha-libre-aaa-23-de-mayo-2026/"
+  },
+  {
+    "id": 6,
+    "categoria": "Noticias",
+    "titulo": "Investigan al réferi por \"ceguera temporal\"",
+    "texto": "El justiciero del ring se volteó a platicar con una doña justo cuando los rudos hacían trampa.",
+    "img": "https://www.radiomas.mx/wp-content/uploads/sites/6/2021/05/magia-blanca-regresado-brios-lucha_0_20_912_568.jpg",
+    "destacada": false,
+    "link": "https://superluchas.com/aew-double-or-nothing-2026/"
+  }
+]

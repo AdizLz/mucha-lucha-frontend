@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <defs>
+    <!-- Fondo oscuro con degradado radial para simular la arena -->
+    <radialGradient id="arenaBg" cx="50%" cy="40%" r="60%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#4a0d0d"/>
+      <stop offset="40%" stop-color="#1c0505"/>
+      <stop offset="100%" stop-color="#050101"/>
+    </radialGradient>
+
+    <!-- Degradados para los focos de luz superiores -->
+    <linearGradient id="spotlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9999" stop-opacity="0.4"/>
+      <stop offset="30%" stop-color="#ff3333" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ff3333" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Resplandor rojo general del escenario -->
+    <radialGradient id="stageGlow" cx="50%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#ff2222" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff2222" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sombra del público en primer plano -->
+    <linearGradient id="crowdShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#0a0303" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 1. FONDO DE LA ARENA -->
+  <rect width="1000" height="650" fill="url(#arenaBg)" />
+  
+  <!-- Resplandor ambiental de las luces -->
+  <rect width="1000" height="650" fill="url(#stageGlow)" />
+
+  <!-- 2. SILUETAS DEL PÚBLICO AL FONDO (Gradas lejanas) -->
+  <g fill="#1a0606" opacity="0.6">
+    <!-- Izquierda fondo -->
+    <path d="M 0,350 Q 150,380 300,400 L 300,500 L 0,500 Z" />
+    <!-- Derecha fondo -->
+    <path d="M 1000,350 Q 850,380 700,400 L 700,500 L 1000,500 Z" />
+    <!-- Efecto de multitud lejana con pequeños círculos/puntos -->
+    <ellipse cx="150" cy="380" rx="120" ry="20" fill="#2d0c0c"/>
+    <ellipse cx="850" cy="380" rx="120" ry="20" fill="#2d0c0c"/>
+  </g>
+
+  <!-- 3. EL RING DE LUCHA -->
+  <g id="ring">
+    <!-- Lona del ring (Perspectiva) -->
+    <polygon points="350,470 650,470 710,550 290,550" fill="#eae6df" stroke="#d1c9bc" stroke-width="2"/>
+    <!-- Borde inferior del ring (Falda) -->
+    <polygon points="290,550 710,550 710,565 290,565" fill="#111" />
+    
+    <!-- Postes del Ring -->
+    <!-- Poste Izquierdo Trasero -->
+    <line x1="350" y1="470" x2="350" y2="420" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+    <!-- Poste Derecho Trasero -->
+    <line x1="650" y1="470" x2="650" y2="420" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+    <!-- Poste Izquierdo Delantero -->
+    <line x1="290" y1="550" x2="290" y2="485" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+    <!-- Poste Derecho Delantero -->
+    <line x1="710" y1="550" x2="710" y2="485" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Cuerdas del Ring (Rojas) -->
+    <!-- Cuerdas traseras -->
+    <path d="M 350,430 L 650,430 M 350,445 L 650,445 M 350,460 L 650,460" stroke="#cc2222" stroke-width="2"/>
+    <!-- Cuerdas de la izquierda -->
+    <path d="M 350,430 L 290,495 M 350,445 L 290,512 M 350,460 L 290,530" stroke="#aa1111" stroke-width="2.5"/>
+    <!-- Cuerdas de la derecha -->
+    <path d="M 650,430 L 710,495 M 650,445 L 710,512 M 650,460 L 710,530" stroke="#aa1111" stroke-width="2.5"/>
+    <!-- Cuerdas delanteras -->
+    <path d="M 290,495 L 710,495 M 290,512 L 710,512 M 290,530 L 710,530" stroke="#ff3333" stroke-width="3"/>
+  </g>
+
+  <!-- 4. LUCHADORES (Siluetas en el centro del ring) -->
+  <g id="fighters" fill="#0a0505" stroke="#221111" stroke-width="1">
+    <!-- Luchador 1 (Izquierda) -->
+    <path d="M 460,490 L 463,460 Q 460,440 465,430 Q 470,412 477,412 Q 484,412 489,430 Q 492,440 491,460 L 494,490 Z" />
+    <!-- Brazos/Hombros L1 -->
+    <path d="M 463,435 Q 450,445 448,460 L 454,462 Q 458,448 466,442 Z" />
+    <path d="M 488,435 Q 500,445 502,460 L 496,462 Q 492,448 485,442 Z" />
+
+    <!-- Luchador 2 (Derecha) -->
+    <path d="M 506,490 L 509,460 Q 506,440 511,430 Q 516,412 523,412 Q 530,412 535,430 Q 538,440 537,460 L 540,490 Z" />
+    <!-- Brazos/Hombros L2 -->
+    <path d="M 509,435 Q 497,445 495,460 L 501,462 Q 505,448 512,442 Z" />
+    <path d="M 534,435 Q 546,445 548,460 L 542,462 Q 538,448 531,442 Z" />
+    
+    <!-- Detalles de máscaras/brillos sutiles blancos -->
+    <path d="M 473,417 L 476,422 L 471,421 Z" fill="#fff" opacity="0.8"/>
+    <path d="M 481,417 L 478,422 L 483,421 Z" fill="#fff" opacity="0.8"/>
+    <path d="M 519,417 L 522,422 L 517,421 Z" fill="#fff" opacity="0.8"/>
+    <path d="M 527,417 L 524,422 L 529,421 Z" fill="#fff" opacity="0.8"/>
+  </g>
+
+  <!-- 5. LUCES / FOCOS SUPERIORES (Efecto Spotlight) -->
+  <g id="lights">
+    <!-- Haz de luz central principal -->
+    <polygon points="500,0 250,560 750,560" fill="url(#spotlight)" style="mix-blend-mode: screen;" />
+    
+    <!-- Haces de luz cruzados individuales estilo cono -->
+    <polygon points="430,0 150,500 380,550" fill="url(#spotlight)" opacity="0.7" style="mix-blend-mode: screen;" />
+    <polygon points="470,0 300,550 550,550" fill="url(#spotlight)" opacity="0.6" style="mix-blend-mode: screen;" />
+    <polygon points="530,0 450,550 700,550" fill="url(#spotlight)" opacity="0.6" style="mix-blend-mode: screen;" />
+    <polygon points="570,0 620,550 850,500" fill="url(#spotlight)" opacity="0.7" style="mix-blend-mode: screen;" />
+
+    <!-- Focos físicos brillantes en el techo -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="420" cy="15" r="4"/>
+      <circle cx="440" cy="15" r="5"/>
+      <circle cx="460" cy="15" r="4"/>
+      
+      <circle cx="540" cy="15" r="4"/>
+      <circle cx="560" cy="15" r="5"/>
+      <circle cx="580" cy="15" r="4"/>
+      
+      <!-- Estructura central de luces -->
+      <ellipse cx="500" cy="10" rx="25" ry="8" fill="#222"/>
+      <circle cx="500" cy="15" r="8" fill="#fff"/>
+    </g>
+    
+    <!-- Destellos laterales adicionales -->
+    <path d="M 200,30 L 100,120 M 230,40 L 140,150 M 260,50 L 180,180" stroke="#ff4444" stroke-width="3" opacity="0.4" />
+    <path d="M 800,30 L 900,120 M 770,40 L 860,150 M 740,50 L 820,180" stroke="#ff4444" stroke-width="3" opacity="0.4" />
+  </g>
+
+  <!-- 6. PÚBLICO EN PRIMER PLANO (Siluetas oscuras abajo) -->
+  <g id="foreground-crowd">
+    <!-- Capa de degradado oscuro para fundir el público con el fondo -->
+    <rect x="0" y="480" width="1000" height="170" fill="url(#crowdShadow)" />
+    
+    <!-- Siluetas de cabezas y hombros de espaldas -->
+    <g fill="#070202">
+      <!-- Fila trasera de las primeras filas -->
+      <circle cx="100" cy="580" r="30"/>
+      <circle cx="180" cy="590" r="28"/>
+      <circle cx="260" cy="575" r="32"/>
+      <circle cx="340" cy="595" r="27"/>
+      <circle cx="420" cy="580" r="30"/>
+      <circle cx="580" cy="580" r="31"/>
+      <circle cx="660" cy="590" r="29"/>
+      <circle cx="740" cy="575" r="33"/>
+      <circle cx="820" cy="595" r="26"/>
+      <circle cx="900" cy="580" r="30"/>
+
+      <!-- Fila más cercana (Cabezas más grandes en la parte inferior) -->
+      <path d="M -20,650 C 10,600 50,600 80,650 Z" />
+      <circle cx="30" cy="610" r="35"/>
+      
+      <path d="M 100,650 C 140,590 190,590 230,650 Z" />
+      <circle cx="165" cy="605" r="38"/>
+
+      <path d="M 270,650 C 310,595 360,595 400,650 Z" />
+      <circle cx="335" cy="610" r="36"/>
+      
+      <path d="M 440,650 C 480,600 520,600 560,650 Z" />
+      <circle cx="500" cy="615" r="37"/>
+
+      <path d="M 600,650 C 640,595 690,595 730,650 Z" />
+      <circle cx="665" cy="610" r="36"/>
+
+      <path d="M 770,650 C 810,590 860,590 900,650 Z" />
+      <circle cx="835" cy="605" r="38"/>
+      
+      <path d="M 920,650 C 950,600 990,600 1020,650 Z" />
+      <circle cx="970" cy="610" r="35"/>
+    </g>
+  </g>
+</svg>

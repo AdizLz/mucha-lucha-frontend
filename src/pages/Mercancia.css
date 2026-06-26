@@ -1,0 +1,212 @@
+.mercancia-page {
+  padding-top: 80px; /* espacio del navbar fixed-top */
+}
+
+/* HEADER */
+.mercancia-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.92)),
+    url("/assets/lucha.svg");
+  background-size: cover;
+  background-position: center;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.mercancia-hero .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+}
+
+/* LAYOUT */
+.mercancia-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+/* SIDEBAR */
+.mercancia-sidebar {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  align-self: start;
+}
+
+.sidebar-title {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-filtros {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.checkbox-filtro {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.checkbox-filtro:hover {
+  color: var(--text);
+}
+
+.checkbox-filtro input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.btn-limpiar-filtros {
+  margin-top: var(--space-md);
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 6px var(--space-sm);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-limpiar-filtros:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* GRID */
+.resultados-count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.productos-grid-full {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.card-producto {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.card-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(220, 53, 69, 0.3);
+}
+
+.producto-badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px var(--space-xs);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.card-producto-imgwrap {
+  background: #0d0d0d;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto-img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.producto-body {
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.producto-body h3 {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  min-height: 36px;
+}
+
+.producto-precio {
+  color: var(--accent-alt);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 6px;
+}
+
+/* FORM CONTROL (input búsqueda) */
+.form-control {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px var(--space-sm);
+  width: 100%;
+}
+.form-control::placeholder { color: rgba(255,255,255,0.4); }
+.form-control:focus {
+  background-color: #2a2a2a;
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220,53,69,0.2);
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  transition: bottom 0.4s ease;
+  z-index: 999;
+}
+.popup.show-popup { bottom: 30px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mercancia-layout {
+    grid-template-columns: 1fr;
+  }
+  .productos-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

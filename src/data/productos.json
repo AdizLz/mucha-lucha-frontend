@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "Máscara Oficial - Psycho Clown", "precio": 1299, "categoria": "mascaras", "badge": "Más Vendido", "img": "https://m.media-amazon.com/images/I/41EDD17lUJL._AC_SY1000_.jpg" },
+  { "id": 2, "nombre": "Playera Lucha Libre - Edición Limitada", "precio": 599, "categoria": "ropa", "badge": "Edición Limitada", "img": "https://http2.mlstatic.com/D_NQ_NP_877894-MLM109862096546_042026-O-playera-luchador-santo-premium-lucha-libre-algodon-a255.webp" },
+  { "id": 3, "nombre": "Figura Coleccionable - El Hijo del Santo", "precio": 2499, "categoria": "juguetes", "badge": "Coleccionable", "img": "https://images-na.ssl-images-amazon.com/images/I/41IMF8T1-lL._AC_UL495_SR435,495_.jpg" },
+  { "id": 4, "nombre": "Póster Firmado - Triplemania XXXI", "precio": 899, "categoria": "posters", "badge": "Autógrafo", "img": "https://http2.mlstatic.com/D_NQ_NP_699752-MLM77846238960_072024-O.webp" },
+  { "id": 5, "nombre": "Máscara Clásica - Blue Demon", "precio": 1499, "categoria": "mascaras", "badge": "Clásico", "img": "https://images-na.ssl-images-amazon.com/images/I/71hW5lh4amL._AC_UL600_SR600,600_.jpg" },
+  { "id": 6, "nombre": "Chamarra Lucha Libre Premium", "precio": 1899, "categoria": "ropa", "badge": "Nuevo", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfWSMgFI6F3WywtCOQ6Vuruce3y_BDpOS0g&s" },
+  { "id": 7, "nombre": "Llavero - Keychain", "precio": 149, "categoria": "juguetes", "img": "https://m.media-amazon.com/images/I/51c6KX7B1uL._AC_SY1000_.jpg" },
+  { "id": 8, "nombre": "Taza Lucha Libre", "precio": 299, "categoria": "juguetes", "img": "https://m.media-amazon.com/images/I/81wuwC0ebNL._AC_UY1000_.jpg" }
+]

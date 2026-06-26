@@ -1,0 +1,153 @@
+.site-home {
+  width: 100%;
+}
+
+/* HERO */
+.hero-home {
+  min-height: var(--hero-height);
+  padding-top: var(--space-xl);
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.9)),
+    url("/assets/lucha.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  width: 100%; /* ← esta línea es la que falta */
+}
+
+.evento-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  border: 1px solid #444;
+  border-radius: var(--radius-lg);
+  padding: 6px var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+}
+
+.dot-rojo {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  max-width: 600px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+.text-accent {
+  color: var(--accent-alt);
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* MERCANCÍA */
+.mercancia-section {
+  background: var(--bg-section);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.section-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.section-kicker {
+  color: var(--accent-alt);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.section-title {
+  color: var(--text);
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: var(--space-xs);
+}
+
+.section-link {
+  color: var(--accent-alt) !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.section-link:hover {
+  color: #22d3ee !important;
+}
+
+/* GRID DE PRODUCTOS */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-sm);
+}
+
+.producto-card {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: 0.3s;
+}
+.producto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.3);
+}
+
+.producto-badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px var(--space-xs);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.producto-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.producto-body {
+  padding: var(--space-sm);
+}
+.producto-body h3 {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+.producto-body p {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .productos-grid { grid-template-columns: repeat(2, 1fr); }
+}
