@@ -1,9 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useCarrito } from "../context/CarritoContext";
+// Íconos de react-icons en vez de emojis: se ven consistentes en cualquier
+// sistema operativo/navegador (los emojis se dibujan distinto en Windows,
+// Mac, Android, etc. y eso rompe la armonía visual).
+import { FaShoppingCart, FaTimes, FaMask } from "react-icons/fa";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [carritoAbierto, setCarritoAbierto] = useState(false);
+  const { items, quitar } = useCarrito();
+  const total = items.reduce((acc, p) => acc + p.precio, 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -15,7 +23,7 @@ export default function Navbar() {
     <nav className={`navbar navbar-expand-lg fixed-top px-4 ${scrolled ? "scrolled" : ""}`}>
       <div className="container-fluid navbar-inner">
         <NavLink className="navbar-brand" to="/">
-          <span className="brand-icon">🤼‍♂️</span>
+          <FaMask className="brand-icon" />
           <span className="brand-text">
             MUCHA<span className="text-accent-alt"> LUCHA</span>
           </span>
@@ -38,14 +46,52 @@ export default function Navbar() {
             <li className="nav-item"><NavLink className="nav-link" to="/luchadores">Luchadores</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/galeria">Galería</NavLink></li>
 
-            <li className="nav-item ms-lg-3">
-              <button className="carrito-btn">
-                🛒
-                <span className="carrito-contador">0</span>
+            <li className="nav-item carrito-wrapper">
+              <button
+                className="carrito-btn"
+                onClick={() => setCarritoAbierto((prev) => !prev)}
+              >
+                <FaShoppingCart />
+                <span className="carrito-contador">{items.length}</span>
               </button>
+
+              {carritoAbierto && (
+                <div className="carrito-dropdown">
+                  {items.length === 0 ? (
+                    <p className="carrito-vacio">Tu carrito está vacío</p>
+                  ) : (
+                    <>
+                      <ul className="carrito-lista">
+                        {items.map((p, i) => (
+                          <li key={`${p.id}-${i}`} className="carrito-item">
+                            <img src={p.img} alt={p.nombre} />
+                            <div className="carrito-item-info">
+                              <span>{p.nombre}</span>
+                              <span className="carrito-item-precio">
+                                ${p.precio.toLocaleString()}
+                              </span>
+                            </div>
+                            <button
+                              className="carrito-item-quitar"
+                              onClick={() => quitar(p.id)}
+                              aria-label="Quitar producto"
+                            >
+                              <FaTimes />
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="carrito-total">
+                        <span>Total</span>
+                        <strong>${total.toLocaleString()}</strong>
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
             </li>
 
-            <li className="nav-item ms-lg-2">
+            <li className="nav-item">
               <button className="btn btn-danger btn-sm iniciar-sesion-btn">
                 Iniciar Sesión
               </button>

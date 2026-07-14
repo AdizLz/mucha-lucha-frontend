@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProductos } from "../services/productosService";
 import CardProducto from "../components/CardProducto";
+import { useCarrito } from "../context/CarritoContext";
 import "./Mercancia.css";
 
 const CATEGORIAS = [
@@ -21,6 +22,7 @@ export default function Mercancia() {
   const [categoriasActivas, setCategoriasActivas] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [popupVisible, setPopupVisible] = useState(false);
+  const { agregar } = useCarrito();
 
 
 
@@ -52,6 +54,7 @@ export default function Mercancia() {
   
 
   const agregarAlCarrito = (producto) => {
+    agregar(producto);
     setPopupVisible(true);
   };
 

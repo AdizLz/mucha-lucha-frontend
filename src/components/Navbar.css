@@ -18,6 +18,14 @@
   justify-content: space-between;
 }
 
+/* Espacio parejo entre TODOS los elementos del menú (links, carrito, botón).
+   Antes cada <li> tenía su propio margen manual (ms-lg-2, ms-lg-3, o nada),
+   lo cual generaba espacios desiguales. Con "gap" en el contenedor, el
+   navegador reparte el mismo espacio entre cada elemento automáticamente. */
+.navbar-nav {
+  gap: 1.5rem;
+}
+
 /* MARCA */
 .navbar-brand {
   display: flex;
@@ -28,6 +36,8 @@
 
 .brand-icon {
   font-size: 1.5rem;
+  color: var(--accent);
+  display: block;
 }
 
 .brand-text {
@@ -48,7 +58,6 @@
   font-weight: 600;
   text-transform: capitalize;
   font-size: 0.95rem;
-  margin: 0 var(--space-sm);
   border-bottom: 2px solid transparent;
   transition: 0.25s;
 }
@@ -62,20 +71,26 @@
 
 /* CARRITO */
 .carrito-btn {
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   color: var(--text);
-  font-size: 1.3rem;
   cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.carrito-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .carrito-contador {
   position: absolute;
-  top: -6px;
-  right: -10px;
+  top: -2px;
+  right: -2px;
   background: var(--accent);
   color: white;
   font-size: 0.65rem;
@@ -86,6 +101,99 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid black;
+}
+
+/* DROPDOWN CARRITO */
+.carrito-wrapper {
+  position: relative;
+}
+
+.carrito-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 300px;
+  background: #111;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  padding: var(--space-sm);
+  z-index: 1000;
+}
+
+.carrito-vacio {
+  color: var(--text);
+  opacity: 0.7;
+  text-align: center;
+  margin: var(--space-sm) 0;
+}
+
+.carrito-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.carrito-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.carrito-item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.carrito-item-info span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carrito-item-precio {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.carrito-item-quitar {
+  background: none;
+  border: none;
+  color: var(--text);
+  opacity: 0.6;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.carrito-item-quitar:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* BOTÓN INICIAR SESIÓN */
